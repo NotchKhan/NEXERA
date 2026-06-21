@@ -6,7 +6,7 @@ export const SITE = {
   phone: '+77020346468',
   phoneDisplay: '+7 (702) 034-64-68',
   whatsapp: 'https://wa.me/77020346468',
-  instagram: 'https://www.instagram.com/nexeraasia/',
+  instagram: 'https://www.instagram.com/nexera.asia/',
   locale: 'ru_KZ',
 }
 
