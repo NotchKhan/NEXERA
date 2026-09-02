@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'NEXERA',
   tagline: 'New Experience Era',
-  url: 'https://nexeraasia.com',
+  url: 'https://nexeraasia.vercel.app',
   email: 'kalabokalam@gmail.com',
   phone: '+77020346468',
   phoneDisplay: '+7 (702) 034-64-68',
