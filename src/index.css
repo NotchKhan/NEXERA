@@ -56,6 +56,14 @@ body {
   max-width: 100vw;
 }
 
+/* Keep the decorative body gradients behind the application. Without an
+   explicit layer the fixed body::after pseudo-element is painted over
+   non-positioned section content, which makes the whole page look dimmed. */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
 /* =============================================
    NOISE OVERLAY — Global texture
    ============================================= */
