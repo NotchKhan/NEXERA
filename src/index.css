@@ -1125,3 +1125,282 @@ summary:focus-visible {
 .hero-trust span {
   white-space: nowrap;
 }
+
+/* =============================================
+   CLIENT JOURNEY + TEAM SECTION V2
+   ============================================= */
+.journey-section {
+  position: relative;
+}
+
+.journey-shell {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border: 1px solid rgba(199, 225, 239, 0.14);
+  border-radius: 2.25rem;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(73, 142, 183, 0.14), transparent 32%),
+    radial-gradient(circle at 94% 100%, rgba(65, 168, 146, 0.10), transparent 30%),
+    linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.012)),
+    rgba(5, 12, 22, 0.78);
+  box-shadow: 0 30px 100px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.055);
+}
+
+.journey-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,0.07), transparent 24%);
+}
+
+.journey-heading,
+.journey-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.journey-cta,
+.team-next-link {
+  color: rgba(220, 238, 246, 0.88);
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.journey-cta:hover,
+.team-next-link:hover {
+  gap: 0.75rem;
+  color: #fff;
+}
+
+.journey-step {
+  min-height: 13.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(198, 221, 235, 0.11);
+  border-radius: 1.5rem;
+  background: rgba(3, 9, 19, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.035);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.journey-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158, 193, 211, 0.26);
+  background: rgba(7, 17, 30, 0.72);
+}
+
+.journey-number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(215, 234, 241, 0.72);
+}
+
+.journey-status {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #9ec1d3;
+  box-shadow: 0 0 0 0.35rem rgba(158, 193, 211, 0.08), 0 0 1.4rem rgba(158, 193, 211, 0.38);
+}
+
+.journey-connector {
+  position: absolute;
+  top: 50%;
+  right: -1.15rem;
+  z-index: 2;
+  width: 1.6rem;
+  height: 1.6rem;
+  place-items: center;
+  border: 1px solid rgba(198, 221, 235, 0.12);
+  border-radius: 999px;
+  color: rgba(215, 234, 241, 0.55);
+  background: #07111e;
+  transform: translateY(-50%);
+}
+
+.developers-section {
+  isolation: isolate;
+  background: #030913;
+}
+
+.developers-section .developers-bg {
+  opacity: 0.78;
+  filter: saturate(0.92) contrast(1.04) brightness(0.88);
+  object-position: center center;
+}
+
+.developers-section::after {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(3,9,19,0.08), rgba(3,9,19,0.26) 72%),
+    linear-gradient(90deg, rgba(3,9,19,0.62), rgba(3,9,19,0.18) 48%, rgba(3,9,19,0.52));
+}
+
+.team-section-content {
+  position: relative;
+}
+
+.developers-section .team-copy-card {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(198, 221, 235, 0.15);
+  border-radius: 2rem;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)),
+    rgba(3, 9, 19, 0.66);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.team-promise {
+  width: 100%;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(198, 221, 235, 0.10);
+}
+
+.team-promise-icon {
+  width: 1.65rem;
+  height: 1.65rem;
+  color: #b9d5e2;
+  border: 1px solid rgba(185, 213, 226, 0.22);
+  background: rgba(158, 193, 211, 0.08);
+}
+
+.team-case-panel {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid rgba(198, 221, 235, 0.09);
+  border-radius: 2rem;
+  background: rgba(3, 9, 19, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.work-showcase::before {
+  content: '';
+  position: absolute;
+  inset: 8% 4%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(72, 139, 180, 0.16), transparent 68%);
+  filter: blur(30px);
+}
+
+.work-card {
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.48), inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+.work-card-left {
+  transform: translate(-4.75rem, 3.35rem) rotate(-6deg);
+}
+
+.work-card-right {
+  transform: translate(4.75rem, -1.9rem) rotate(5deg);
+}
+
+.work-card-main {
+  transform: translateY(-3.8rem) rotate(-1deg);
+}
+
+.work-card-left:hover {
+  transform: translate(-4.75rem, 3.35rem) rotate(-6deg) scale(1.025);
+}
+
+.work-card-right:hover {
+  transform: translate(4.75rem, -1.9rem) rotate(5deg) scale(1.025);
+}
+
+.work-card-main:hover {
+  transform: translateY(-3.8rem) rotate(-1deg) scale(1.025);
+}
+
+.contact-status-dot {
+  border: 2px solid #07111e;
+  background: #34d399;
+  box-shadow: 0 0 0 0.22rem rgba(52, 211, 153, 0.13);
+}
+
+.btn-magnetic {
+  isolation: isolate;
+}
+
+.btn-magnetic .btn-slide {
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .journey-shell {
+    border-radius: 1.75rem;
+  }
+
+  .journey-step {
+    min-height: 0;
+  }
+
+  .developers-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .developers-section .developers-bg {
+    opacity: 0.62;
+    filter: saturate(0.9) contrast(1.02) brightness(0.74);
+    object-position: center center;
+  }
+
+  .developers-section::after {
+    background:
+      radial-gradient(circle at 50% 20%, rgba(3,9,19,0.12), rgba(3,9,19,0.38) 68%),
+      linear-gradient(180deg, rgba(3,9,19,0.18), rgba(3,9,19,0.42));
+  }
+
+  .developers-section .team-copy-card,
+  .team-case-panel {
+    border-radius: 1.75rem;
+  }
+
+  .floating-contact {
+    right: max(0.9rem, env(safe-area-inset-right));
+    bottom: max(0.9rem, env(safe-area-inset-bottom));
+    width: 10.25rem;
+  }
+
+  .floating-contact-trigger {
+    font-size: 0.78rem;
+  }
+
+  .work-card-left {
+    transform: translate(-3.35rem, 2.8rem) rotate(-5deg);
+  }
+
+  .work-card-right {
+    transform: translate(3.35rem, -1.4rem) rotate(4deg);
+  }
+
+  .work-card-main {
+    transform: translateY(-3.2rem) rotate(-1deg);
+  }
+}
+
+@media (max-width: 420px) {
+  .team-case-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team-case-header > span {
+    max-width: none;
+    text-align: left;
+  }
+
+  .work-card-left {
+    transform: translate(-2.7rem, 2.6rem) rotate(-5deg);
+  }
+
+  .work-card-right {
+    transform: translate(2.7rem, -1.25rem) rotate(4deg);
+  }
+}

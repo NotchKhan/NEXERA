@@ -52,6 +52,18 @@ const copy = {
         ['Продуктовые системы', 'Лендинги, SaaS, CRM, панели'],
       ],
     },
+    journey: {
+      label: 'Ваш путь',
+      titleA: 'От идеи до',
+      titleB: 'готового запуска',
+      text: 'Вы всегда понимаете, что происходит дальше: без скрытых этапов и бесконечных согласований.',
+      steps: [
+        ['01', 'Выбираем решение', 'Определяем задачу и формат под ваш бюджет.'],
+        ['02', 'Фиксируем план', 'Согласуем структуру, срок и стоимость до старта.'],
+        ['03', 'Запускаем и поддерживаем', 'Проверяем результат на всех устройствах и остаёмся на связи.'],
+      ],
+      cta: 'Посмотреть решения',
+    },
     cards: {
       sales: 'Интеллект продаж',
       salesDesc: 'Метрики в реальном времени для решений, которые растят бизнес.',
@@ -101,15 +113,20 @@ const copy = {
     },
     team: {
       label: 'Команда',
-      titleA: 'Наши разработчики',
-      titleB: 'больше, чем код',
-      text: 'Победители олимпиад и участники хакатонов. Они используют 20+ AI-инструментов в ежедневной работе, пишут на сложных языках программирования и берутся за проекты, от которых многие команды отказываются.',
-      badges: ['Победители олимпиад', 'Финалисты хакатонов', '20+ AI-инструментов', 'Сложные языки: Rust, Go, C++'],
-      caseLabel: 'Избранный кейс в продакшене',
-      note: '* Интерактивные веб-макеты кастомных продакшен-шаблонов.',
+      titleA: 'Команда, которая',
+      titleB: 'доводит до запуска',
+      text: 'Стратегия, дизайн и разработка собраны в одной команде. Победители олимпиад и финалисты хакатонов превращают задачу в работающий продукт и остаются на связи после релиза.',
+      badges: ['Один контакт на весь проект', 'Сроки 1–2 недели', '20+ AI-инструментов', 'Поддержка после запуска'],
+      promise: 'Понятные статусы на каждом этапе — без технического хаоса для клиента.',
+      caseLabel: 'Реальный кейс',
+      caseTitle: 'merey.bento',
+      caseMeta: 'Лендинг · каталог · оформление заказа',
+      note: '* Адаптивный интерфейс: от первого экрана до заявки.',
+      cta: 'Дальше — как мы работаем',
     },
     protocol: {
       label: 'Процесс',
+      phase: 'Этап',
       titleA: 'Как мы превращаем идеи',
       titleB: 'в запуск',
       text: 'Четкий путь от стратегии до релиза без хаоса и бесконечных переделок.',
@@ -127,10 +144,10 @@ const copy = {
       popular: 'Популярно',
       discount: 'Скидка ограничена',
       plans: [
-        ['Сайты-подарки', 'От $25', '$80', '/ проект', 'Эмоциональные сайты для особенного человека, события или красивого вопроса.', ['Сайты-подарки и поздравления', 'Дни рождения и годовщины', 'Страницы “Будешь моей девушкой?”', 'Фото, музыка и личное сообщение', 'Романтичный мобильный дизайн', 'Быстрая доставка простых идей'], 'Заказать подарок'],
-        ['Лендинги', 'От $150', '$300', '/ проект', 'Чистые сайты для малого бизнеса, где нужны доверие, ясность и заявки.', ['Бизнес-лендинг', 'Презентация услуги или продукта', 'Кнопки связи и форма заявки', 'Адаптив под все устройства', 'Базовое SEO и аналитика', 'Структура для рекламы и Instagram'], 'Собрать страницу'],
+        ['Сайты-подарки', '12 990 ₸', '', '/ проект', 'Эмоциональные сайты для особенного человека, события или красивого вопроса.', ['Сайты-подарки и поздравления', 'Дни рождения и годовщины', 'Страницы “Будешь моей девушкой?”', 'Фото, музыка и личное сообщение', 'Романтичный мобильный дизайн', 'Быстрая доставка простых идей'], 'Заказать подарок'],
+        ['Лендинги', '22 990 ₸', '', '/ проект', 'Чистые сайты для малого бизнеса, где нужны доверие, ясность и заявки.', ['Бизнес-лендинг', 'Презентация услуги или продукта', 'Кнопки связи и форма заявки', 'Адаптив под все устройства', 'Базовое SEO и аналитика', 'Структура для рекламы и Instagram'], 'Собрать страницу'],
         ['SaaS-платформы', 'Индивидуально', '', '/ проект', 'Полноценные веб-продукты: кабинеты, оплаты, админки, базы данных и автоматизация.', ['SaaS-сайт или веб-приложение', 'Логин и личные кабинеты', 'Админ-панель и база данных', 'Оплаты или бронирования', 'Автоматизация и интеграции', 'Поддержка запуска и улучшений'], 'Обсудить SaaS'],
-        ['AI-услуги', 'От $15', '$30', '/ задача', 'AI-креатив для контента, подарков, соцсетей и быстрых визуальных идей.', ['AI-видео и reels', 'AI-фото и редактирование', 'Мокапы продуктов и визуалы', 'Аватары и персонажи', 'Короткие промо-концепты', 'Быстрые креативные эксперименты'], 'Заказать AI'],
+        ['AI-услуги', '5 000 ₸', '', '/ задача', 'AI-креатив для контента, подарков, соцсетей и быстрых визуальных идей.', ['AI-видео и reels', 'AI-фото и редактирование', 'Мокапы продуктов и визуалы', 'Аватары и персонажи', 'Короткие промо-концепты', 'Быстрые креативные эксперименты'], 'Заказать AI'],
       ],
     },
     footer: {
@@ -188,6 +205,18 @@ const copy = {
         ['Өнімдік жүйелер', 'Лендинг, SaaS, CRM, панельдер'],
       ],
     },
+    journey: {
+      label: 'Сіздің жолыңыз',
+      titleA: 'Идеядан',
+      titleB: 'дайын іске қосуға дейін',
+      text: 'Жасырын кезеңсіз және созылған келісусіз, әрқашан келесі қадамды білесіз.',
+      steps: [
+        ['01', 'Шешімді таңдаймыз', 'Міндет пен бюджетке сай форматты анықтаймыз.'],
+        ['02', 'Жоспарды бекітеміз', 'Жұмыс басталғанға дейін құрылым, мерзім және бағаны келісеміз.'],
+        ['03', 'Іске қосып, қолдаймыз', 'Нәтижені барлық құрылғыда тексеріп, релизден кейін де байланыста боламыз.'],
+      ],
+      cta: 'Шешімдерді көру',
+    },
     cards: {
       sales: 'Сату аналитикасы',
       salesDesc: 'Бизнесті өсіретін шешімдерге арналған нақты уақыт метрикалары.',
@@ -237,15 +266,20 @@ const copy = {
     },
     team: {
       label: 'Команда',
-      titleA: 'Біздің әзірлеушілер',
-      titleB: 'кодтан да жоғары',
-      text: 'Олимпиада жеңімпаздары және хакатон қатысушылары. Олар күнделікті жұмыста 20+ AI-құрал қолданады, күрделі бағдарламалау тілдерінде жазады және көп команда бас тартатын жобаларды алады.',
-      badges: ['Олимпиада жеңімпаздары', 'Хакатон финалистері', '20+ AI-құрал', 'Күрделі тілдер: Rust, Go, C++'],
-      caseLabel: 'Продакшендегі таңдаулы кейс',
-      note: '* Кастом продакшен-шаблондардың интерактивті веб-макеттері.',
+      titleA: 'Жобаны іске қосуға',
+      titleB: 'жеткізетін команда',
+      text: 'Стратегия, дизайн және әзірлеу бір командада. Олимпиада жеңімпаздары мен хакатон финалистері міндетті жұмыс істейтін өнімге айналдырып, релизден кейін де байланыста болады.',
+      badges: ['Бүкіл жобаға бір байланыс', 'Мерзім 1–2 апта', '20+ AI-құрал', 'Іске қосқаннан кейін қолдау'],
+      promise: 'Әр кезеңдегі түсінікті статустар — клиент үшін техникалық хаоссыз.',
+      caseLabel: 'Нақты кейс',
+      caseTitle: 'merey.bento',
+      caseMeta: 'Лендинг · каталог · тапсырысты рәсімдеу',
+      note: '* Бірінші экраннан өтінімге дейінгі адаптив интерфейс.',
+      cta: 'Келесі — біз қалай жұмыс істейміз',
     },
     protocol: {
       label: 'Процесс',
+      phase: 'Кезең',
       titleA: 'Идеяны қалай',
       titleB: 'іске қосамыз',
       text: 'Стратегиядан релизге дейінгі анық жол: хаоссыз және шексіз түзетусіз.',
@@ -263,10 +297,10 @@ const copy = {
       popular: 'Танымал',
       discount: 'Шектеулі жеңілдік',
       plans: [
-        ['Сыйлық сайттар', '$25 бастап', '$80', '/ жоба', 'Ерекше адамға, сәтке немесе әдемі сұраққа арналған эмоциялық сайттар.', ['Сыйлық және құттықтау сайттары', 'Туған күн және мерейтой беттері', '“Менің қызым боласың ба?” беттері', 'Фото, музыка және жеке хабарлама', 'Мобильге ыңғайлы романтикалық дизайн', 'Қарапайым идеяларға жылдам жеткізу'], 'Сыйлық сайтқа тапсырыс'],
-        ['Лендингтер', '$150 бастап', '$300', '/ жоба', 'Сенім, түсінікті құрылым және өтінім керек шағын бизнеске арналған таза сайттар.', ['Бизнес лендинг', 'Қызмет немесе өнім презентациясы', 'Байланыс батырмалары және өтінім формасы', 'Барлық құрылғыға адаптив', 'Базалық SEO және аналитика', 'Жарнама мен Instagram үшін құрылым'], 'Парақша жасау'],
+        ['Сыйлық сайттар', '12 990 ₸', '', '/ жоба', 'Ерекше адамға, сәтке немесе әдемі сұраққа арналған эмоциялық сайттар.', ['Сыйлық және құттықтау сайттары', 'Туған күн және мерейтой беттері', '“Менің қызым боласың ба?” беттері', 'Фото, музыка және жеке хабарлама', 'Мобильге ыңғайлы романтикалық дизайн', 'Қарапайым идеяларға жылдам жеткізу'], 'Сыйлық сайтқа тапсырыс'],
+        ['Лендингтер', '22 990 ₸', '', '/ жоба', 'Сенім, түсінікті құрылым және өтінім керек шағын бизнеске арналған таза сайттар.', ['Бизнес лендинг', 'Қызмет немесе өнім презентациясы', 'Байланыс батырмалары және өтінім формасы', 'Барлық құрылғыға адаптив', 'Базалық SEO және аналитика', 'Жарнама мен Instagram үшін құрылым'], 'Парақша жасау'],
         ['SaaS платформалар', 'Жеке есеп', '', '/ жоба', 'Кабинеттері, төлемдері, админ панелі, дерекқоры және автоматтандыруы бар толық веб өнімдер.', ['SaaS сайт немесе веб-қосымша', 'Логин және жеке кабинеттер', 'Админ панель және дерекқор', 'Төлем немесе брондау ағымдары', 'Автоматтандыру және интеграциялар', 'Іске қосу қолдауы және жақсарту'], 'SaaS талқылау'],
-        ['AI қызметтер', '$15 бастап', '$30', '/ тапсырма', 'Контентке, сыйлықтарға, әлеуметтік желіге және тез визуал идеяларға арналған AI-креатив.', ['AI видео және reels', 'AI фото жасау немесе өңдеу', 'Өнім мокаптары және визуалдар', 'Аватар немесе кейіпкер суреттері', 'Қысқа промо-концепттер', 'Жылдам креатив эксперименттері'], 'AI жұмысқа тапсырыс'],
+        ['AI қызметтер', '5 000 ₸', '', '/ тапсырма', 'Контентке, сыйлықтарға, әлеуметтік желіге және тез визуал идеяларға арналған AI-креатив.', ['AI видео және reels', 'AI фото жасау немесе өңдеу', 'Өнім мокаптары және визуалдар', 'Аватар немесе кейіпкер суреттері', 'Қысқа промо-концепттер', 'Жылдам креатив эксперименттері'], 'AI жұмысқа тапсырыс'],
       ],
     },
     footer: {
@@ -324,6 +358,18 @@ const copy = {
         ['Product Systems', 'Landing, SaaS, CRM, dashboards'],
       ],
     },
+    journey: {
+      label: 'Your path',
+      titleA: 'From first idea to',
+      titleB: 'a confident launch',
+      text: 'You always know what happens next: no hidden stages, vague handoffs, or endless approval loops.',
+      steps: [
+        ['01', 'Choose the right solution', 'We match the goal and format to your priorities and budget.'],
+        ['02', 'Lock the plan', 'Scope, timeline, and price are agreed before production starts.'],
+        ['03', 'Launch with support', 'We test every device, ship the result, and stay available after release.'],
+      ],
+      cta: 'Explore solutions',
+    },
     cards: {
       sales: 'Sales Intelligence',
       salesDesc: 'Real-time performance metrics powering your growth decisions.',
@@ -373,15 +419,20 @@ const copy = {
     },
     team: {
       label: 'Our Team',
-      titleA: 'Our developers are',
-      titleB: 'more than code',
-      text: 'Olympiad winners and hackathon participants. They use 20+ AI tools in daily work, write in complex programming languages, and take on projects most teams walk away from.',
-      badges: ['Olympiad Winners', 'Hackathon Finalists', '20+ AI Tools', 'Hard Languages: Rust, Go, C++'],
-      caseLabel: 'Featured Production Case',
-      note: '* Interactive web mockups of custom production templates.',
+      titleA: 'A team that takes you',
+      titleB: 'all the way to launch',
+      text: 'Strategy, design, and engineering work as one team. Olympiad winners and hackathon finalists turn the brief into a working product and stay available after release.',
+      badges: ['One contact for the whole project', 'Typical timeline: 1–2 weeks', '20+ AI tools', 'Support after launch'],
+      promise: 'Clear updates at every stage, without technical chaos for the client.',
+      caseLabel: 'Real client case',
+      caseTitle: 'merey.bento',
+      caseMeta: 'Landing page · catalog · checkout',
+      note: '* Responsive experience from the first screen to the final inquiry.',
+      cta: 'Next — see how we work',
     },
     protocol: {
       label: 'Process',
+      phase: 'Phase',
       titleA: 'How we turn ideas',
       titleB: 'into launch',
       text: 'A clear path from strategy to release, without chaos or endless rework.',
@@ -399,10 +450,10 @@ const copy = {
       popular: 'Most Popular',
       discount: 'Limited discount',
       plans: [
-        ['Custom Gifts', 'From $25', '$80', '/ project', 'Simple emotional websites made for one special person, one moment, or one beautiful question.', ['Gift and greeting websites', 'Birthday or anniversary pages', '"Will you be my girlfriend?" pages', 'Personal photos, music, and message', 'Mobile-friendly romantic layout', 'Fast delivery for simple ideas'], 'Order a Gift Site'],
-        ['Landing Pages', 'From $150', '$300', '/ project', 'Clean, focused websites for small businesses that need trust, clarity, and client requests online.', ['Business landing page', 'Service or product presentation', 'Contact buttons and lead form', 'Responsive design for every device', 'Basic SEO and analytics setup', 'Clear structure for ads and Instagram'], 'Build My Page'],
+        ['Custom Gifts', '12 990 ₸', '', '/ project', 'Simple emotional websites made for one special person, one moment, or one beautiful question.', ['Gift and greeting websites', 'Birthday or anniversary pages', '"Will you be my girlfriend?" pages', 'Personal photos, music, and message', 'Mobile-friendly romantic layout', 'Fast delivery for simple ideas'], 'Order a Gift Site'],
+        ['Landing Pages', '22 990 ₸', '', '/ project', 'Clean, focused websites for small businesses that need trust, clarity, and client requests online.', ['Business landing page', 'Service or product presentation', 'Contact buttons and lead form', 'Responsive design for every device', 'Basic SEO and analytics setup', 'Clear structure for ads and Instagram'], 'Build My Page'],
         ['SaaS Platforms', 'Custom', '', '/ project', 'Full web products for serious ideas: dashboards, accounts, payments, admin panels, and automation.', ['Full SaaS website or web app', 'User login and dashboards', 'Admin panel and database', 'Payments or booking flows', 'Automation and integrations', 'Launch support and improvements'], 'Discuss SaaS'],
-        ['AI Services', 'From $15', '$30', '/ task', 'Simple AI-powered creative work for content, gifts, social media, and fast visual ideas.', ['AI video clips and reels', 'AI photo creation or editing', 'Product mockups and visuals', 'Avatar or character images', 'Short promo concepts', 'Fast creative experiments'], 'Request AI Work'],
+        ['AI Services', '5 000 ₸', '', '/ task', 'Simple AI-powered creative work for content, gifts, social media, and fast visual ideas.', ['AI video clips and reels', 'AI photo creation or editing', 'Product mockups and visuals', 'Avatar or character images', 'Short promo concepts', 'Fast creative experiments'], 'Request AI Work'],
       ],
     },
     footer: {
@@ -546,9 +597,9 @@ function Navbar({ lang, setLang, t }) {
 
   const desktopLinks = [
     { name: t.nav.services, href: '#services' },
+    { name: t.nav.team, href: '#team' },
     { name: t.nav.process, href: '#work' },
     { name: t.nav.philosophy, href: '#about' },
-    { name: t.nav.team, href: '#team' },
     { name: t.nav.pricing, href: '#contact' },
   ]
 
@@ -883,6 +934,53 @@ function Hero({ t }) {
             {item}
           </span>
         ))}
+      </div>
+    </section>
+  )
+}
+
+// =============================================
+// B2. JOURNEY — clear path from choice to launch
+// =============================================
+function Journey({ t }) {
+  return (
+    <section id="journey" className="journey-section px-4 py-14 md:px-12 md:py-20 lg:px-24">
+      <div className="journey-shell mx-auto max-w-7xl">
+        <div className="journey-heading flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <span className="section-label mb-3 block">{t.journey.label}</span>
+            <h2 className="font-sans text-3xl font-black leading-tight tracking-tight md:text-5xl" style={{ color: 'var(--ivory)' }}>
+              {t.journey.titleA}{' '}
+              <span className="font-drama gradient-text">{t.journey.titleB}</span>
+            </h2>
+          </div>
+
+          <div className="max-w-sm lg:text-right">
+            <p className="font-sans text-sm leading-relaxed text-white/55">{t.journey.text}</p>
+            <a href="#services" className="journey-cta mt-4 inline-flex items-center gap-2 font-sans text-sm font-bold no-underline">
+              {t.journey.cta}
+              <ChevronRight size={15} />
+            </a>
+          </div>
+        </div>
+
+        <div className="journey-grid mt-10 grid grid-cols-1 gap-3 md:grid-cols-3">
+          {t.journey.steps.map(([num, title, desc], index) => (
+            <article key={num} className="journey-step relative">
+              <div className="mb-8 flex items-center justify-between">
+                <span className="journey-number font-data">{num}</span>
+                <span className="journey-status" aria-hidden="true" />
+              </div>
+              <h3 className="mb-2 font-sans text-lg font-black" style={{ color: 'var(--ivory)' }}>{title}</h3>
+              <p className="font-sans text-sm leading-relaxed text-white/48">{desc}</p>
+              {index < t.journey.steps.length - 1 && (
+                <span className="journey-connector hidden md:grid" aria-hidden="true">
+                  <ChevronRight size={15} />
+                </span>
+              )}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -1451,27 +1549,26 @@ function Developers({ t }) {
     <section
       ref={sectionRef}
       id="team"
-      className="developers-section relative w-full overflow-hidden flex items-center justify-center py-20 lg:py-0"
-      style={{ minHeight: '100dvh' }}
+      className="developers-section relative flex w-full items-center justify-center overflow-hidden px-4 py-20 md:px-8 lg:min-h-[100dvh] lg:py-24"
     >
       <picture className="developers-bg absolute inset-0 w-full h-full z-0 block">
-        <source srcSet="/developers-hero.webp" type="image/webp" />
+        <source srcSet="/team-bg-v2.webp" type="image/webp" />
         <img
-          src="/developers-hero.png"
+          src="/team-bg-v2.png"
           alt=""
           role="presentation"
-          width={1853}
-          height={1040}
+          width={1536}
+          height={1024}
           loading="lazy"
           decoding="async"
           className="developers-bg h-full w-full object-cover"
         />
       </picture>
 
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-5 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      <div className="team-section-content relative z-20 mx-auto flex w-full max-w-7xl flex-col items-stretch justify-between gap-12 lg:flex-row lg:items-center lg:gap-14">
         
         {/* Left Column: Developers Info */}
-        <div className="dev-content w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="dev-content team-copy-card flex w-full flex-col items-start text-left lg:w-[45%]">
           <span className="section-label block mb-5">{t.team.label}</span>
 
           <h2
@@ -1505,25 +1602,37 @@ function Developers({ t }) {
               </span>
             ))}
           </div>
+
+          <div className="team-promise mt-7 flex items-start gap-3">
+            <span className="team-promise-icon mt-0.5 grid flex-shrink-0 place-items-center rounded-full">
+              <Check size={12} />
+            </span>
+            <p className="font-sans text-sm leading-relaxed text-white/62">{t.team.promise}</p>
+          </div>
         </div>
 
         {/* Right Column: Work Examples Showcase */}
-        <div className="w-full lg:w-[48%] flex flex-col items-center justify-center">
+        <div className="team-case-panel flex w-full flex-col items-center justify-center lg:w-[50%]">
           {/* Label for works */}
-          <div className="flex items-center gap-2 mb-6 lg:self-start">
-            <span className="font-data text-xs text-white/45 uppercase tracking-wider">{t.team.caseLabel}</span>
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <div className="team-case-header mb-4 flex w-full max-w-[540px] items-end justify-between gap-4 px-1">
+            <div>
+              <div className="mb-2 flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="font-data text-[10px] uppercase tracking-[0.18em] text-white/45">{t.team.caseLabel}</span>
+              </div>
+              <p className="font-sans text-xl font-black text-white">{t.team.caseTitle}</p>
+            </div>
+            <span className="max-w-[220px] text-right font-data text-[9px] uppercase tracking-wider text-white/35">{t.team.caseMeta}</span>
           </div>
 
           {/* Premium cascading mockups */}
-          <div className="relative w-full max-w-[520px] h-[420px] md:h-[500px] flex items-center justify-center select-none">
+          <div className="work-showcase relative flex h-[360px] w-full max-w-[540px] select-none items-center justify-center sm:h-[430px] md:h-[470px]">
             
             {/* Card 1 - Bottom Left (Cakes Grid) */}
             <div 
-              className="absolute w-[210px] sm:w-[290px] rounded-2xl border border-white/10 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105"
+              className="work-card work-card-left absolute w-[190px] rounded-2xl border border-white/10 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105 sm:w-[270px]"
               style={{
                 background: 'rgba(10,31,26,0.6)',
-                transform: 'translateX(-90px) translateY(55px) rotate(-7deg)',
                 zIndex: 10,
                 backdropFilter: 'blur(2px)',
               }}
@@ -1539,10 +1648,9 @@ function Developers({ t }) {
 
             {/* Card 2 - Bottom Right (Contact) */}
             <div 
-              className="absolute w-[210px] sm:w-[290px] rounded-2xl border border-white/10 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105"
+              className="work-card work-card-right absolute w-[190px] rounded-2xl border border-white/10 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105 sm:w-[270px]"
               style={{
                 background: 'rgba(10,31,26,0.6)',
-                transform: 'translateX(90px) translateY(-40px) rotate(6deg)',
                 zIndex: 11,
                 backdropFilter: 'blur(2px)',
               }}
@@ -1558,10 +1666,9 @@ function Developers({ t }) {
 
             {/* Card 3 - Center Top (Hero) */}
             <div 
-              className="absolute w-[230px] sm:w-[310px] rounded-2xl border border-emerald-500/30 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105"
+              className="work-card work-card-main absolute w-[210px] rounded-2xl border border-emerald-500/30 shadow-2xl transition-all duration-500 hover:z-30 hover:scale-105 sm:w-[290px]"
               style={{
                 background: 'rgba(8,14,18,0.6)',
-                transform: 'translateY(-65px) rotate(-1deg)',
                 zIndex: 12,
                 boxShadow: '0 24px 60px rgba(0, 229, 160, 0.18)',
                 backdropFilter: 'blur(2px)',
@@ -1582,6 +1689,11 @@ function Developers({ t }) {
           <span className="mt-6 font-data text-[9px] text-white/30 select-none text-center">
             {t.team.note}
           </span>
+
+          <a href="#work" className="team-next-link mt-5 inline-flex items-center gap-2 font-sans text-sm font-bold no-underline">
+            {t.team.cta}
+            <ChevronRight size={15} />
+          </a>
         </div>
 
       </div>
@@ -1703,7 +1815,7 @@ function Protocol({ t }) {
                 </p>
                 <div className="mt-6 flex items-center gap-2">
                   <div className="w-5 h-px" style={{ background: 'var(--neon-green)' }} />
-                  <span className="font-data text-xs" style={{ color: 'rgba(0,229,160,0.55)' }}>Phase {step.num}</span>
+                  <span className="font-data text-xs" style={{ color: 'rgba(0,229,160,0.55)' }}>{t.protocol.phase} {step.num}</span>
                 </div>
               </div>
             </div>
@@ -1946,6 +2058,7 @@ function Footer({ t }) {
           <ul className="flex flex-col gap-2.5">
             {[
               { label: t.nav.services, href: '#services' },
+              { label: t.nav.team, href: '#team' },
               { label: t.nav.process, href: '#work' },
               { label: t.nav.philosophy, href: '#about' },
               { label: t.nav.pricing, href: '#contact' },
@@ -2061,7 +2174,7 @@ function FloatingContact({ t }) {
   return (
     <div
       ref={widgetRef}
-      className="fixed bottom-6 right-6 z-50 flex w-[190px] flex-col items-center gap-3 font-sans floating-contact"
+      className="fixed bottom-6 right-6 z-50 flex w-[176px] flex-col items-center gap-3 font-sans floating-contact sm:w-[190px]"
     >
       {/* Contact drawers */}
       <div
@@ -2113,19 +2226,16 @@ function FloatingContact({ t }) {
       {/* Main floating button */}
       <button
         onClick={() => setOpen(!open)}
-        className="group relative flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#00f5a8] text-void font-sans font-black text-sm shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 z-10"
+        className="floating-contact-trigger group relative z-10 flex items-center justify-center gap-2 rounded-full bg-[#00f5a8] px-4 py-2.5 font-sans text-sm font-black text-void shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-95 sm:px-5 sm:py-3"
         style={{
-          boxShadow: '0 0 34px rgba(0,245,168,0.85), 0 12px 24px rgba(0,0,0,0.35)',
-          border: '2px solid rgba(255,255,255,0.95)',
+          boxShadow: '0 14px 34px rgba(0,229,160,0.28), 0 10px 24px rgba(0,0,0,0.35)',
+          border: '1px solid rgba(255,255,255,0.82)',
         }}
         aria-label={t.floating.aria}
       >
         {/* Pulsing indicator */}
         {!open && (
-          <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
-          </span>
+          <span className="contact-status-dot absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full" aria-hidden="true" />
         )}
 
         <div className={`transition-transform duration-300 ${open ? 'rotate-90 scale-90' : 'rotate-0'}`}>
@@ -2173,10 +2283,11 @@ export default function App() {
       <Navbar lang={lang} setLang={handleSetLang} t={t} />
       <main id="main-content">
         <Hero t={t} />
+        <Journey t={t} />
         <Features t={t} />
-        <Philosophy t={t} />
         <Developers t={t} />
         <Protocol t={t} />
+        <Philosophy t={t} />
         <Pricing t={t} />
       </main>
       <Footer t={t} />
