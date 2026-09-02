@@ -1332,6 +1332,10 @@ summary:focus-visible {
 }
 
 @media (max-width: 767px) {
+  .pricing-card.pricing-featured {
+    padding-top: 4rem;
+  }
+
   .journey-shell {
     border-radius: 1.75rem;
   }
