@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { SITE, waLink } from './site'
 import Hero from './components/Hero'
+import QuickNav from './components/QuickNav'
 
 const copy = {
   ru: {
@@ -414,6 +415,7 @@ function App() {
   return (
     <div className="site" id="top">
       <Hero t={t} language={language} />
+      <QuickNav language={language} setLanguage={setLanguage} nav={t.nav} />
 
       <main>
         <section className="section solutions-section" id="solutions">

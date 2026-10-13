@@ -1,0 +1,72 @@
+.quick-nav {
+  position: fixed;
+  z-index: 1000;
+  top: max(12px, env(safe-area-inset-top));
+  left: 50%;
+  width: min(calc(100% - 32px), 1120px);
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 28px);
+  padding: 7px 10px 7px 22px;
+  border: 1px solid rgba(161, 194, 255, .32);
+  border-radius: 19px;
+  background: rgba(10, 27, 53, .92);
+  color: #fff;
+  box-shadow: 0 15px 42px rgba(6, 24, 56, .23), inset 0 1px rgba(255, 255, 255, .11);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -120%);
+  transition: opacity .32s ease, transform .42s cubic-bezier(.2,.8,.2,1), visibility .32s;
+}
+
+.quick-nav--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.quick-nav__brand { flex: none; font: 700 19px/1 Arial, sans-serif; letter-spacing: .16em; white-space: nowrap; }
+.quick-nav__brand-full span, .quick-nav__brand-short span { color: #64a0ff; }
+.quick-nav__brand-short { display: none; }
+.quick-nav__links { display: flex; justify-content: center; align-items: center; gap: 3px; flex: 1; }
+.quick-nav__links a { padding: 10px 11px; border-radius: 10px; color: #c9d9f2; font-size: 12px; font-weight: 700; white-space: nowrap; transition: color .2s ease, background .2s ease; }
+.quick-nav__links a:hover, .quick-nav__links a:focus-visible { color: #fff; background: rgba(124, 168, 240, .2); }
+.quick-nav__languages { flex: none; display: flex; gap: 2px; padding: 3px; border: 1px solid rgba(172, 203, 255, .21); border-radius: 12px; background: rgba(255, 255, 255, .07); }
+.quick-nav__languages button { min-width: 34px; min-height: 32px; padding: 0 5px; border: 0; border-radius: 9px; background: transparent; color: #aebfdc; font-size: 11px; font-weight: 800; letter-spacing: .04em; transition: color .2s ease, background .2s ease; }
+.quick-nav__languages button:hover { color: #fff; }
+.quick-nav__languages button.is-active { background: #f5f9ff; color: #122b55; box-shadow: 0 2px 9px rgba(0, 0, 0, .2); }
+.quick-nav__toggle { display: none; }
+.quick-nav__menu { position: absolute; top: calc(100% + 8px); right: 0; width: min(320px, 100%); padding: 8px; border: 1px solid rgba(161, 194, 255, .3); border-radius: 17px; background: rgba(10, 27, 53, .97); box-shadow: 0 20px 45px rgba(6, 24, 56, .26); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); animation: quick-menu-in .22s ease both; }
+.quick-nav__menu a { display: flex; justify-content: space-between; align-items: center; padding: 13px 14px; border-radius: 10px; color: #edf5ff; font-size: 14px; font-weight: 700; }
+.quick-nav__menu a:hover, .quick-nav__menu a:focus-visible { background: rgba(124, 168, 240, .2); }
+.quick-nav__progress { position: absolute; left: 0; bottom: 0; height: 2px; border-radius: 0 4px 4px 19px; background: linear-gradient(90deg, #3379ff, #80bdff); box-shadow: 0 0 12px #4788ff; pointer-events: none; }
+.quick-nav :focus-visible { outline: 2px solid #9cc9ff; outline-offset: 2px; }
+
+@keyframes quick-menu-in { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 970px) {
+  .quick-nav { width: min(calc(100% - 24px), 560px); gap: 10px; min-height: 56px; padding: 7px 8px 7px 14px; }
+  .quick-nav__brand { margin-right: auto; }
+  .quick-nav__brand-full { display: none; }
+  .quick-nav__brand-short { display: inline; }
+  .quick-nav__links { display: none; }
+  .quick-nav__toggle { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 36px; padding: 0 10px; border: 1px solid rgba(172, 203, 255, .25); border-radius: 10px; background: rgba(255,255,255,.1); color: #fff; font-size: 12px; font-weight: 800; white-space: nowrap; }
+  .quick-nav__toggle svg { transition: transform .2s ease; }
+  .quick-nav__toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+}
+
+@media (max-width: 350px) {
+  .quick-nav { gap: 5px; padding-left: 10px; }
+  .quick-nav__toggle { padding-inline: 7px; }
+  .quick-nav__languages button { min-width: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-nav { transition: none; }
+  .quick-nav__menu { animation: none; }
+}

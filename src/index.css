@@ -12,7 +12,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 36px; }
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+html::-webkit-scrollbar { width: 12px; }
+html::-webkit-scrollbar-track { background: #e7effd; }
+html::-webkit-scrollbar-thumb { min-height: 48px; border: 3px solid #e7effd; border-radius: 100px; background: linear-gradient(180deg, #69a5ff, #2769e6 58%, #153e89); }
+html::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #458cff, #1858d0 58%, #102f70); }
+@supports (-moz-appearance: none) {
+  html { scrollbar-width: thin; scrollbar-color: #3777ec #e7effd; }
+}
 body { margin: 0; overflow-x: hidden; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { font: inherit; cursor: pointer; }
