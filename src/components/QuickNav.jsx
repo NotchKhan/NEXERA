@@ -25,6 +25,7 @@ export default function QuickNav({ language, setLanguage, nav }) {
         frame = 0
         const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight)
         setVisible(window.scrollY > 110)
+        if (window.scrollY <= 110) setMenuOpen(false)
         setProgress(Math.min(100, Math.max(0, window.scrollY / maxScroll * 100)))
       })
     }
@@ -37,10 +38,6 @@ export default function QuickNav({ language, setLanguage, nav }) {
       window.cancelAnimationFrame(frame)
     }
   }, [])
-
-  useEffect(() => {
-    if (!visible) setMenuOpen(false)
-  }, [visible])
 
   useEffect(() => {
     if (!menuOpen) return undefined

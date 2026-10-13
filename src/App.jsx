@@ -12,6 +12,7 @@ import ScrollEffects from './components/ScrollEffects'
 
 const copy = {
   ru: {
+    skip: 'Перейти к содержимому',
     nav: ['Решения', 'Как работаем', 'Тарифы', 'Дополнения', 'Контакты'],
     hero: {
       lines: ['Современные', 'цифровые', 'решения'],
@@ -137,6 +138,7 @@ const copy = {
     scroll: 'Листайте ниже',
   },
   kk: {
+    skip: 'Негізгі мазмұнға өту',
     nav: ['Шешімдер', 'Жұмыс барысы', 'Тарифтер', 'Қосымша', 'Байланыс'],
     hero: {
       lines: ['Заманауи', 'цифрлық', 'шешімдер'],
@@ -244,6 +246,7 @@ const copy = {
     scroll: 'Төмен қараңыз',
   },
   en: {
+    skip: 'Skip to main content',
     nav: ['Solutions', 'Process', 'Pricing', 'Add-ons', 'Contact'],
     hero: {
       lines: ['Modern', 'digital', 'solutions'],
@@ -357,7 +360,7 @@ const sectionIds = ['solutions', 'process', 'pricing', 'extras', 'contact']
 
 function Brand({ light = false }) {
   return (
-    <a className={'brand' + (light ? ' brand-light' : '')} href="#top" aria-label="NEXERA — home">
+    <a className={'brand' + (light ? ' brand-light' : '')} href="#top">
       <span className="brand-name">NE<span className="brand-x">X</span>ERA</span>
       <span className="brand-tagline">DIGITAL SOLUTIONS</span>
     </a>
@@ -415,11 +418,12 @@ function App() {
 
   return (
     <div className="site" id="top">
-      <Hero t={t} language={language} />
+      <a className="skip-link" href="#main-content">{t.skip}</a>
       <QuickNav language={language} setLanguage={setLanguage} nav={t.nav} />
       <ScrollEffects language={language} />
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
+        <Hero t={t} language={language} />
         <section className="section solutions-section" id="solutions">
           <div className="container">
             <SectionHead eyebrow={t.intro.eyebrow} title={t.intro.title} description={t.intro.description} />

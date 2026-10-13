@@ -37,19 +37,11 @@
     <meta name="twitter:image:alt" content="NEXERA — New Experience Era Worldwide" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Match the hero picture sources to avoid downloading unused artwork. -->
-    <link rel="preload" as="image" href="/nexera-tall-480.webp" imagesrcset="/nexera-tall-480.webp 480w, /nexera-tall-853.webp 853w" imagesizes="100vw" type="image/webp" media="(max-width: 900px)" />
-    <link rel="preload" as="image" href="/nexera-wide-1672.webp" imagesrcset="/nexera-wide-960.webp 960w, /nexera-wide-1672.webp 1672w" imagesizes="100vw" type="image/webp" media="(min-width: 901px)" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="image" href="/nexera-tall-480.webp" imagesrcset="/nexera-tall-480.webp 480w, /nexera-tall-853.webp 853w" imagesizes="100vw" fetchpriority="high" type="image/webp" media="(max-width: 900px)" />
+    <link rel="preload" as="image" href="/nexera-wide-1672.webp" imagesrcset="/nexera-wide-960.webp 960w, /nexera-wide-1672.webp 1672w" imagesizes="100vw" fetchpriority="high" type="image/webp" media="(min-width: 901px)" />
 
     <!-- Schema.org -->
     <script type="application/ld+json">
