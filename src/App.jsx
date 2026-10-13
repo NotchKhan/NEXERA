@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import {
-  ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown,
-  CreditCard, Globe2, Headphones, Camera, Layers3, Menu, MessageCircle,
-  Monitor, MoveUpRight, Settings2, ShieldCheck, ShoppingBag, Smartphone,
+  ArrowRight, ArrowUpRight, Check, ChevronDown,
+  CreditCard, Globe2, Camera, Layers3, Menu, MessageCircle,
+  ShieldCheck, ShoppingBag, Smartphone,
   Sparkles, X,
 } from 'lucide-react'
 import { SITE, waLink } from './site'
+import Hero from './components/Hero'
 
 const copy = {
   ru: {
@@ -349,7 +350,6 @@ const copy = {
   },
 }
 
-const serviceIcons = [Monitor, Settings2, Smartphone, Headphones]
 const extraIcons = [MessageCircle, CreditCard, Globe2, Sparkles, Smartphone, Layers3]
 const sectionIds = ['solutions', 'process', 'pricing', 'extras', 'contact']
 
@@ -413,74 +413,7 @@ function App() {
 
   return (
     <div className="site" id="top">
-      <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-halo hero-halo-one" aria-hidden="true" />
-        <div className="hero-halo hero-halo-two" aria-hidden="true" />
-        <header className="site-header container">
-          <Brand />
-          <div className="header-actions">
-            <div className="language-switch" aria-label="Language">
-              {['ru', 'kk', 'en'].map((code) => (
-                <button key={code} type="button" className={language === code ? 'active' : ''} onClick={() => setLanguage(code)} aria-pressed={language === code}>
-                  {code === 'kk' ? 'KZ' : code.toUpperCase()}
-                </button>
-              ))}
-            </div>
-            <button className="menu-button" type="button" aria-label={menuOpen ? t.close : t.menu} aria-expanded={menuOpen} aria-controls="site-menu" onClick={() => setMenuOpen((open) => !open)}>
-              {menuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
-          {menuOpen && (
-            <nav className="site-menu" id="site-menu" aria-label="Main navigation">
-              {t.nav.map((item, index) => <a href={'#' + sectionIds[index]} key={item} onClick={() => setMenuOpen(false)}>{item}<ArrowUpRight size={17} /></a>)}
-            </nav>
-          )}
-        </header>
-
-        <div className="hero-main container">
-          <div className="hero-copy">
-            <h1 id="hero-title">
-              {t.hero.lines.map((line) => <span key={line}>{line}</span>)}
-              <span className="hero-accent">{t.hero.accent[0]}<br />{t.hero.accent[1]}</span>
-            </h1>
-            <p>{t.hero.description}</p>
-            <ContactLink message={projectMessage} className="hero-cta" icon={false}>
-              {t.hero.cta}<span className="hero-cta-arrow"><ArrowRight size={26} strokeWidth={2.4} aria-hidden="true" /></span>
-            </ContactLink>
-          </div>
-          <div className="hero-device-wrap" aria-hidden="true">
-            <img className="hero-laptop" src="/nexera-laptop.webp" alt="" width="1536" height="1024" fetchPriority="high" />
-            <img className="hero-phone" src="/nexera-phone.webp" alt="" width="1024" height="1536" />
-            <img className="hero-devices-mobile" src="/nexera-device-mockup.webp" alt="" width="1536" height="1024" />
-          </div>
-        </div>
-
-        <div className="hero-dark">
-          <div className="hero-rock" aria-hidden="true" />
-          <div className="hero-dark-inner container">
-            <div className="hero-proof">
-              <span className="proof-circle"><MoveUpRight size={27} strokeWidth={1.7} /></span>
-              <div className="proof-bars" aria-hidden="true"><i /><i /><i /><i /></div>
-              <p>{t.hero.result}</p>
-              <span className="proof-clients"><strong>100+</strong><small>{t.hero.proof.replace('100+ ', '')}</small></span>
-            </div>
-            <div className="hero-service-grid">
-              {t.services.map(([title, description], index) => {
-                const Icon = serviceIcons[index]
-                return (
-                  <a href={['#pricing', '#extras', '#extras', '#care'][index]} className="hero-service-card" key={title}>
-                    <span className="service-icon"><Icon size={26} strokeWidth={1.7} aria-hidden="true" /></span>
-                    <strong>{title}</strong>
-                    <span>{description}</span>
-                  </a>
-                )
-              })}
-            </div>
-            <div className="hero-signoff"><span>NEXERA</span><i /><span>{t.hero.strap}</span></div>
-          </div>
-        </div>
-        <a className="scroll-cue" href="#solutions" aria-label={t.scroll}><ArrowDown size={18} /></a>
-      </section>
+      <Hero t={t} language={language} />
 
       <main>
         <section className="section solutions-section" id="solutions">
@@ -628,6 +561,23 @@ function App() {
             <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} />WhatsApp</a>
             <a href={'tel:' + SITE.phone}>{SITE.phoneDisplay}</a>
           </div>
+        </div>
+        <div className="container footer-tools">
+          <div className="language-switch" aria-label="Language">
+            {['ru', 'kk', 'en'].map((code) => (
+              <button key={code} type="button" className={language === code ? 'active' : ''} onClick={() => setLanguage(code)} aria-pressed={language === code}>
+                {code === 'kk' ? 'KZ' : code.toUpperCase()}
+              </button>
+            ))}
+          </div>
+          <button className="menu-button" type="button" aria-label={menuOpen ? t.close : t.menu} aria-expanded={menuOpen} aria-controls="site-menu" onClick={() => setMenuOpen((open) => !open)}>
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+          {menuOpen && (
+            <nav className="site-menu" id="site-menu" aria-label="Main navigation">
+              {t.nav.map((item, index) => <a href={'#' + sectionIds[index]} key={item} onClick={() => setMenuOpen(false)}>{item}<ArrowUpRight size={17} /></a>)}
+            </nav>
+          )}
         </div>
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} NEXERA</span><span>New Experience Era</span></div>
       </footer>

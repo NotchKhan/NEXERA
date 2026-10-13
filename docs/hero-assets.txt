@@ -1,0 +1,11 @@
+NEXERA hero scene — built-in ImageGen editing mode
+Reference: codex-clipboard-ebf40284-660d-4b54-9fed-4af38a0642d6.png
+Exterior text, CTA and cards are live HTML, not part of the image.
+Responsive WebP files are prepared with scripts/prepare-hero-assets.mjs.
+
+Final prompt:
+Use case: precise-object-edit.
+Input image 1 is the edit target: a 1024×1536 NEXERA website design. Produce a clean photographic background plate for implementing this exact design as real HTML. Preserve the entire canvas, all object positions, scale, camera perspective, colors, lighting and textures pixel-faithfully.
+REMOVE ONLY the exterior page overlay UI: the top-left NEXERA logo at x60–300 y50–110; the large exterior headline at x60–545 y165–495; the exterior paragraph x65–435 y525–630; the exterior black CTA x65–355 y648–715; the complete glass testimonial card x475–980 y1005–1195 including its text/avatars/graph; the four glass service cards x60–970 y1225–1410; and the bottom logo, horizontal rule and strapline y1465–1500. Inpaint their underlying background naturally.
+KEEP UNCHANGED the photorealistic laptop at x340–980 y410–945 and tilted smartphone at x60–445 y720–1240, INCLUDING all the NEXERA website content, browser chrome and flower/real-estate previews INSIDE their screens. Do not remove text inside the devices. Preserve exact device size, pose, black bezels and shadows.
+KEEP the exact pale white/blue abstract flowing ribbon background, real dark rocky diagonal surface, and soft blue atmospheric glow along bottom. The cleaned lower area should be uninterrupted natural stone and blue haze, no rectangles or cards. No new objects. No outside-device text, logos, buttons, graphics or UI. This is just a decorative scene plate; all exterior UI will be rendered separately in HTML. Output the same portrait 2:3 composition.
