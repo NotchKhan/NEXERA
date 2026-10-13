@@ -1,6 +1,11 @@
 /* Two art-directed reference layouts; exterior interface remains live HTML. */
 .reference-hero{background:#edf4ff;font-family:Arial,Helvetica,sans-serif}
 .ref-stage{position:relative;width:100%;aspect-ratio:1672/941;container-type:inline-size;isolation:isolate}
+/* Trim desktop headroom without scaling the composition or moving the scroll position. */
+@media(min-width:901px){
+ .reference-hero{display:flow-root;overflow:clip}
+ .ref-stage{margin-top:calc(-1 * clamp(14px,1.5vw,28px))}
+}
 .ref-visual,.ref-scene{position:absolute;inset:0}.ref-scene{z-index:-1;pointer-events:none}.ref-scene img{width:100%;height:100%;object-fit:fill}
 .ref-header{position:absolute;left:6.34%;top:4.57%}.ref-wordmark{display:block;width:13cqw;color:#030405}.ref-wordmark svg{display:block;width:100%;height:auto}.ref-wordmark>span{display:block;margin-top:.4cqw;color:#28518b;font-size:.48cqw;line-height:1;letter-spacing:.49cqw;white-space:nowrap}
 .ref-copy{position:absolute;left:6.34%;top:14%;width:31%}.ref-copy h1{margin:0;color:#000;font-size:4.65cqw;line-height:.81;font-weight:700;letter-spacing:-.29cqw}.ref-copy h1>span{display:block;white-space:nowrap}.ref-copy h1 .ref-accent{color:#0861ff}.ref-copy h1 .ref-accent:nth-child(4){margin-top:.65cqw}
