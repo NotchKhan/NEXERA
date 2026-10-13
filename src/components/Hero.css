@@ -48,3 +48,41 @@
 }
 @media(max-width:350px){.ref-visual{height:207cqw}.ref-scene{top:42cqw}}
 @media(prefers-reduced-motion:reduce){.ref-service,.ref-cta{transition:none}}
+
+/* A light, decorative "portal" layer, kept separate from the artwork and content. */
+.ref-enchantment{position:absolute;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+.ref-aurora{position:absolute;left:49%;top:-21%;width:61cqw;aspect-ratio:1.15;border-radius:50%;background:radial-gradient(ellipse at 48% 52%,#b6d6ff38 0,#6da3ff1c 43%,transparent 71%);mix-blend-mode:screen;filter:blur(13px);animation:ref-aurora-drift 15s ease-in-out infinite alternate}
+.ref-sigil{position:absolute;right:4%;top:4%;width:41cqw;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 80deg,transparent 0 14%,#e9f5ff8a 18%,transparent 25% 42%,#98bfff77 50%,transparent 57% 79%,#deeeff88 86%,transparent 93%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px));opacity:.75;animation:ref-sigil-turn 36s linear infinite}
+.ref-glint{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 8px 3px #d6eaffb5,0 0 21px 8px #75aaff66;animation:ref-glint-pulse 4.8s ease-in-out infinite}
+.ref-glint::before,.ref-glint::after{content:'';position:absolute;left:50%;top:50%;background:linear-gradient(90deg,transparent,#fff,transparent);transform:translate(-50%,-50%)}
+.ref-glint::before{width:32px;height:1px}.ref-glint::after{width:1px;height:32px;background:linear-gradient(transparent,#fff,transparent)}
+.ref-glint-one{left:52%;top:16%;animation-delay:-1.2s}.ref-glint-two{right:11%;top:31%;width:5px;height:5px;animation-delay:-2.8s}.ref-glint-three{left:57%;top:62%;width:4px;height:4px;animation-delay:-4s}
+
+@keyframes ref-aurora-drift{from{transform:translate3d(-5%,4%,0) scale(.94);opacity:.55}to{transform:translate3d(7%,-5%,0) scale(1.08);opacity:.95}}
+@keyframes ref-sigil-turn{to{transform:rotate(360deg)}}
+@keyframes ref-glint-pulse{0%,100%{opacity:.2;transform:scale(.6)}45%{opacity:.9;transform:scale(1.12)}70%{opacity:.45;transform:scale(.8)}}
+@keyframes ref-entrance{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ref-blue-unveil{from{opacity:0;clip-path:inset(0 100% 0 0);filter:drop-shadow(0 0 0 #6faaff)}to{opacity:1;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 12px #6faaff55)}}
+
+@media(prefers-reduced-motion:no-preference){
+ .ref-wordmark{animation:ref-entrance .55s cubic-bezier(.16,1,.3,1) both}
+ .ref-copy h1>span{animation:ref-entrance .7s cubic-bezier(.16,1,.3,1) both}
+ .ref-copy h1>span:nth-child(1){animation-delay:.03s}.ref-copy h1>span:nth-child(2){animation-delay:.08s}.ref-copy h1>span:nth-child(3){animation-delay:.13s}
+ .ref-copy h1>span.ref-accent{animation:ref-blue-unveil .75s cubic-bezier(.16,1,.3,1) both}
+ .ref-copy h1>span:nth-child(4){animation-delay:.2s}.ref-copy h1>span:nth-child(5){animation-delay:.28s}
+ .ref-copy p{animation:ref-entrance .6s cubic-bezier(.16,1,.3,1) .35s both}
+ .ref-cta{animation:ref-entrance .6s cubic-bezier(.16,1,.3,1) .45s both}
+}
+
+@media(max-width:900px){
+ .ref-aurora{left:33%;top:9%;width:80cqw}
+ .ref-sigil{right:-13%;top:23%;width:62cqw}
+ .ref-glint-one{left:87%;top:18%}.ref-glint-two{right:8%;top:44%}.ref-glint-three{left:54%;top:59%}
+}
+@media(max-width:500px){
+ .ref-enchantment{height:100%}.ref-aurora{left:40%;top:34cqw;width:78cqw;opacity:.6}.ref-sigil{right:-20%;top:56cqw;width:65cqw;opacity:.5}
+ .ref-glint-one{left:88%;top:60cqw}.ref-glint-two{right:11%;top:100cqw}.ref-glint-three{left:60%;top:130cqw}
+}
+@media(prefers-reduced-motion:reduce){
+ .ref-aurora,.ref-sigil,.ref-glint,.ref-wordmark,.ref-copy h1>span,.ref-copy p,.ref-cta{animation:none}
+}

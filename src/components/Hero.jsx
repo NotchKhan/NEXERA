@@ -63,6 +63,10 @@ export default function Hero({ t, language }) {
             <source media="(max-width: 900px)" srcSet="/nexera-tall-480.webp 480w, /nexera-tall-853.webp 853w" sizes="100vw" />
             <img src="/nexera-wide-1672.webp" srcSet="/nexera-wide-960.webp 960w, /nexera-wide-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" fetchPriority="high" decoding="async" />
           </picture>
+          <div className="ref-enchantment" aria-hidden="true">
+            <i className="ref-aurora" /><i className="ref-sigil" />
+            <i className="ref-glint ref-glint-one" /><i className="ref-glint ref-glint-two" /><i className="ref-glint ref-glint-three" />
+          </div>
           <header className="ref-header"><HeroWordmark /></header>
           <div className="ref-copy">
             <h1 id="hero-title">

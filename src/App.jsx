@@ -8,6 +8,7 @@ import {
 import { SITE, waLink } from './site'
 import Hero from './components/Hero'
 import QuickNav from './components/QuickNav'
+import ScrollEffects from './components/ScrollEffects'
 
 const copy = {
   ru: {
@@ -416,6 +417,7 @@ function App() {
     <div className="site" id="top">
       <Hero t={t} language={language} />
       <QuickNav language={language} setLanguage={setLanguage} nav={t.nav} />
+      <ScrollEffects language={language} />
 
       <main>
         <section className="section solutions-section" id="solutions">
