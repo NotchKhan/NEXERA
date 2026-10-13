@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Code2, Headphones, MessageCircle, Monitor, Rocket, Settings, Smartphone } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Headphones, Monitor, Settings, Smartphone } from 'lucide-react'
 import './Hero.css'
 
 const serviceIcons = [Monitor, Settings, Smartphone, Headphones]
@@ -30,7 +30,7 @@ function HeroProof({ t }) {
       <div className="ref-proof-bars" aria-hidden="true"><i /><i /><i /><i /></div>
       <p>{t.hero.result}</p>
       <div className="ref-proof-promise">
-        <span className="ref-proof-symbols" aria-hidden="true"><i><Code2 /></i><i><MessageCircle /></i><i><Rocket /></i></span>
+        <span className="ref-proof-avatars" aria-hidden="true"><img src="/nexera-portrait-sprite.webp" alt="" width="1672" height="941" loading="lazy" /></span>
         <span><strong>100+</strong>{t.hero.proof.replace('100+ ', '')}</span>
       </div>
     </div>
@@ -45,8 +45,7 @@ function HeroServices({ t }) {
         return (
           <a className="ref-service" href={serviceLinks[index]} key={title}>
             <span className="ref-service-icon"><Icon aria-hidden="true" /></span>
-            <strong>{title}</strong>
-            <span>{description}</span>
+            <span className="ref-service-copy"><strong>{title}</strong><span>{description}</span></span>
           </a>
         )
       })}
@@ -61,8 +60,8 @@ export default function Hero({ t, language }) {
       <div className="ref-stage">
         <div className="ref-visual">
           <picture className="ref-scene" aria-hidden="true">
-            <source media="(max-width: 600px)" srcSet="/nexera-hero-mobile-480.webp 480w, /nexera-hero-mobile-768.webp 768w" sizes="100vw" />
-            <img src="/nexera-hero-scene.webp" srcSet="/nexera-hero-scene-768.webp 768w, /nexera-hero-scene.webp 1024w" sizes="(min-width: 1200px) 1200px, 100vw" width="1024" height="1536" alt="" fetchPriority="high" decoding="async" />
+            <source media="(max-width: 900px)" srcSet="/nexera-tall-480.webp 480w, /nexera-tall-853.webp 853w" sizes="100vw" />
+            <img src="/nexera-wide-1672.webp" srcSet="/nexera-wide-960.webp 960w, /nexera-wide-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" fetchPriority="high" decoding="async" />
           </picture>
           <header className="ref-header"><HeroWordmark /></header>
           <div className="ref-copy">
