@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import './ScrollEffects.css'
 
 const revealSelectors = [
-  '.ref-proof', '.ref-service', '.ref-signature',
   'main .section-head', '.system-step', '.example-preview',
   '.plan-card', '.pricing-note', '.extra-card', '.extras-detail-list',
   '.process-step', '.care-card', '.faq-list details', '.contact-inner',

@@ -15,10 +15,13 @@ const copy = {
     skip: 'Перейти к содержимому',
     nav: ['Решения', 'Как работаем', 'Тарифы', 'Дополнения', 'Контакты'],
     hero: {
-      lines: ['Современные', 'цифровые', 'решения'],
-      accent: ['для вашего', 'бизнеса'],
-      description: 'Мы создаём сайты, автоматизацию и мобильные приложения, которые привлекают клиентов и помогают вашему бизнесу расти.',
+      eyebrow: 'NEXERA / DIGITAL SOLUTIONS',
+      heading: 'Цифровые решения',
+      accent: 'для вашего бизнеса.',
+      description: 'Создаём сайты, приложения и автоматизацию для роста вашего бизнеса.',
       cta: 'Начать проект',
+      secondary: 'Посмотреть решения',
+      note: 'Дизайн, разработка и поддержка — одна команда.',
       result: 'Реальные решения для реальных результатов',
       proof: '100+ довольных клиентов',
       strap: 'ВАШ БИЗНЕС · БОЛЬШЕ КЛИЕНТОВ · БОЛЬШЕ ВОЗМОЖНОСТЕЙ',
@@ -141,10 +144,13 @@ const copy = {
     skip: 'Негізгі мазмұнға өту',
     nav: ['Шешімдер', 'Жұмыс барысы', 'Тарифтер', 'Қосымша', 'Байланыс'],
     hero: {
-      lines: ['Заманауи', 'цифрлық', 'шешімдер'],
-      accent: ['сіздің', 'бизнесіңізге'],
-      description: 'Біз клиент тартып, бизнесіңіздің өсуіне көмектесетін сайттар, автоматтандыру және мобильді қосымшалар жасаймыз.',
+      eyebrow: 'NEXERA / DIGITAL SOLUTIONS',
+      heading: 'Бизнесіңізге',
+      accent: 'цифрлық шешімдер.',
+      description: 'Бизнесіңізді дамытатын сайттар, мобильді қосымшалар және автоматтандыру шешімдерін жасаймыз.',
       cta: 'Жобаны бастау',
+      secondary: 'Шешімдерді көру',
+      note: 'Дизайн, әзірлеу және қолдау — бір команда.',
       result: 'Нақты нәтижеге арналған нақты шешімдер',
       proof: '100+ риза клиент',
       strap: 'СІЗДІҢ БИЗНЕС · КӨБІРЕК КЛИЕНТ · КӨБІРЕК МҮМКІНДІК',
@@ -249,10 +255,13 @@ const copy = {
     skip: 'Skip to main content',
     nav: ['Solutions', 'Process', 'Pricing', 'Add-ons', 'Contact'],
     hero: {
-      lines: ['Modern', 'digital', 'solutions'],
-      accent: ['for your', 'business'],
-      description: 'We create websites, automation and mobile apps that attract customers and help your business grow.',
+      eyebrow: 'NEXERA / DIGITAL SOLUTIONS',
+      heading: 'Digital solutions',
+      accent: 'for your business.',
+      description: 'Websites, mobile apps and automation that help you reach customers and run your business.',
       cta: 'Start a project',
+      secondary: 'Explore solutions',
+      note: 'Design, development and support. One team.',
       result: 'Real solutions for real results',
       proof: '100+ happy clients',
       strap: 'YOUR BUSINESS · MORE CUSTOMERS · MORE POSSIBILITIES',
@@ -388,7 +397,8 @@ function ContactLink({ children, message, className = '', icon = true }) {
 function App() {
   const [language, setLanguage] = useState(() => {
     try {
-      return localStorage.getItem('nexera-language') || 'ru'
+      const saved = localStorage.getItem('nexera-language')
+      return ['kk', 'ru', 'en'].includes(saved) ? saved : 'ru'
     } catch {
       return 'ru'
     }
@@ -423,7 +433,7 @@ function App() {
       <ScrollEffects language={language} />
 
       <main id="main-content" tabIndex={-1}>
-        <Hero t={t} language={language} />
+        <Hero language={language} />
         <section className="section solutions-section" id="solutions">
           <div className="container">
             <SectionHead eyebrow={t.intro.eyebrow} title={t.intro.title} description={t.intro.description} />
@@ -440,7 +450,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section example-section">
+        <section className="section example-section" id="portfolio">
           <div className="container example-grid">
             <div className="example-copy">
               <SectionHead eyebrow={t.example.eyebrow} title={t.example.title} description={t.example.description} light />
@@ -459,7 +469,7 @@ function App() {
             <SectionHead eyebrow={t.pricing.eyebrow} title={t.pricing.title} description={t.pricing.description} />
             <div className="pricing-grid">
               {t.pricing.plans.map((plan, index) => (
-                <article className={'plan-card' + (index === 1 ? ' plan-featured' : '')} key={plan.name}>
+                <article className={'plan-card' + (index === 1 ? ' plan-featured' : '')} id={['plan-mini', 'plan-business', 'plan-business-pro'][index]} key={plan.name}>
                   {index === 1 && <span className="plan-badge"><Sparkles size={15} />{t.pricing.popular}</span>}
                   <div className="plan-top">
                     <span className="plan-index">0{index + 1} / 03</span>
@@ -484,7 +494,7 @@ function App() {
               {t.extras.items.map(([title, description, price], index) => {
                 const Icon = extraIcons[index]
                 return (
-                  <article className="extra-card" key={title}>
+                  <article className="extra-card" id={index === 0 ? 'whatsapp-automation' : index === 5 ? 'mobile-applications' : undefined} key={title}>
                     <span className="extra-icon"><Icon size={25} strokeWidth={1.7} aria-hidden="true" /></span>
                     <h3>{title}</h3>
                     <p>{description}</p>
