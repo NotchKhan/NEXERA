@@ -24,9 +24,7 @@
 .digital-contact svg { width: 1.3cqw; height: 1.3cqw; stroke-width: 1.8; transition: transform .25s; }
 .digital-contact:hover { background: #0c2049; box-shadow: 0 0 20px #1b69ff40, inset 0 0 12px #1b69ff20; }
 .digital-contact:hover svg { transform: translateX(3px); }
-.digital-intro { position: absolute; z-index: 5; top: 7.4%; left: 15%; width: 70%; text-align: center; }
-.digital-eyebrow { display: inline-flex; align-items: center; gap: .55cqw; min-height: 2.48cqw; margin: 0 0 .82cqw; padding: .35cqw 1.05cqw; border: 1px solid #244aab; border-radius: 100px; background: #060c20b0; box-shadow: inset 0 0 .7cqw #1546e540; color: #c5cce1; font-size: .96cqw; font-weight: 400; line-height: 1.4; }
-.digital-eyebrow svg { width: 1.28cqw; height: 1.28cqw; color: #ffdf00; filter: drop-shadow(0 0 5px #ffe00030); }
+.digital-intro { position: absolute; z-index: 5; top: calc(7.4% + 3.3cqw); left: 15%; width: 70%; text-align: center; }
 .digital-hero h1 { margin: 0; color: #fafafa; font-size: 5.03cqw; font-weight: 750; line-height: .98; letter-spacing: -.032em; }
 .digital-hero h1 > span { display: block; }
 .digital-hero h1 em { font-style: normal; color: #4983ff; background: linear-gradient(105deg, #00b9ee 3%, #229cf1 26%, #5c6cf5 55%, #ab37ef 88%, #c13ce9); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -78,8 +76,7 @@
 @keyframes digital-copy-enter { from { opacity: 0; transform: translateY(16px); filter: blur(5px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
 @keyframes digital-card-unfold { from { opacity: 0; transform: translate3d(var(--entry-x), 12cqw, 0) rotate(0deg) scale(.7); } to { opacity: 1; transform: translate3d(0,0,0) rotate(var(--angle)) scale(1); } }
 @media (prefers-reduced-motion: no-preference) {
-  .digital-header, .digital-eyebrow, .digital-hero h1, .digital-description { animation: digital-copy-enter .75s cubic-bezier(.2,.7,.2,1) both; }
-  .digital-eyebrow { animation-delay: 70ms; }
+  .digital-header, .digital-hero h1, .digital-description { animation: digital-copy-enter .75s cubic-bezier(.2,.7,.2,1) both; }
   .digital-hero h1 { animation-delay: 130ms; }
   .digital-description { animation-delay: 220ms; }
   .digital-card-slot { animation: digital-card-unfold 1.15s cubic-bezier(.16,1,.3,1) var(--delay) both; }
@@ -87,6 +84,11 @@
 @media (hover: hover) and (pointer: fine) {
   .digital-card:hover { transform: translateY(-1.1cqw) scale(1.025); box-shadow: 0 0 2.1cqw color-mix(in srgb, var(--glow) 45%, transparent), 0 2cqw 4cqw #000a; }
   .digital-card:hover .digital-card-arrow { background: color-mix(in srgb, var(--accent) 70%, transparent); transform: translateX(.2cqw); }
+}
+
+/* Trim the spare top edge, preserving the reference's headline/card geometry. */
+@media (min-width: 1051px) {
+  .digital-hero { --hero-top-trim: clamp(12px, 1.172vw, 22.5px); top: calc(-1 * var(--hero-top-trim)); margin-bottom: calc(-1 * var(--hero-top-trim)); }
 }
 
 /* A readable two-column adaptation retains all five cards and their depth. */
@@ -98,8 +100,6 @@
   .digital-contact { min-height: 44px; gap: 9px; padding: 10px 15px; font-size: 12px; }
   .digital-contact svg { width: 17px; height: 17px; }
   .digital-intro { position: relative; inset: auto; width: auto; margin: 39px 20px 34px; }
-  .digital-eyebrow { min-height: 30px; gap: 7px; margin-bottom: 18px; padding: 5px 12px; font-size: 11px; }
-  .digital-eyebrow svg { width: 16px; height: 16px; }
   .digital-hero h1 { font-size: clamp(35px, 6.7vw, 50px); line-height: 1.03; letter-spacing: -.04em; }
   .digital-description { max-width: 520px; margin: 18px auto 0; font-size: 14px; line-height: 1.5; text-wrap: balance; }
   .digital-description > span { display: inline; }

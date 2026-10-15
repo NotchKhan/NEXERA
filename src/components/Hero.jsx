@@ -1,9 +1,8 @@
-import { ArrowRight, Smartphone, Zap } from 'lucide-react'
+import { ArrowRight, Smartphone } from 'lucide-react'
 import './Hero.css'
 
 const heroCopy = {
   ru: {
-    eyebrow: 'Современные решения',
     firstLine: 'Всё для вашего',
     secondLine: 'бизнеса в',
     description: ['Создаём сайты, автоматизируем процессы', 'и разрабатываем приложения для вашего бизнеса.'],
@@ -18,7 +17,6 @@ const heroCopy = {
     ],
   },
   kk: {
-    eyebrow: 'Заманауи шешімдер',
     firstLine: 'Бизнесіңізге қажет',
     secondLine: 'барлығы —',
     description: ['Сайттар жасаймыз, процестерді автоматтандырамыз', 'және бизнесіңізге арналған қосымшалар әзірлейміз.'],
@@ -33,7 +31,6 @@ const heroCopy = {
     ],
   },
   en: {
-    eyebrow: 'Modern solutions',
     firstLine: 'Everything for your',
     secondLine: 'business in',
     description: ['We build websites, automate processes', 'and develop applications for your business.'],
@@ -114,7 +111,6 @@ export default function Hero({ language }) {
     </header>
 
     <div className="digital-intro">
-      <p className="digital-eyebrow"><Zap aria-hidden="true" fill="currentColor" strokeWidth={0} /><span>{l.eyebrow}</span></p>
       <h1 id="hero-title"><span>{l.firstLine}</span><span>{l.secondLine}{' '}<em>Digital</em></span></h1>
       <p className="digital-description">{l.description.map(line => <span key={line}>{line}</span>)}</p>
     </div>
