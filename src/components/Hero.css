@@ -101,6 +101,7 @@
   .digital-contact svg { width: 17px; height: 17px; }
   .digital-intro { position: relative; inset: auto; width: auto; margin: 39px 20px 34px; }
   .digital-hero h1 { font-size: clamp(35px, 6.7vw, 50px); line-height: 1.03; letter-spacing: -.04em; }
+  .digital-hero[lang="kk"] h1 { font-size: clamp(27px, 6.7vw, 50px); }
   .digital-description { max-width: 520px; margin: 18px auto 0; font-size: 14px; line-height: 1.5; text-wrap: balance; }
   .digital-description > span { display: inline; }
   .digital-description > span + span::before { content: ' '; }
