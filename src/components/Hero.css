@@ -24,8 +24,8 @@
 .digital-contact svg { width: 1.3cqw; height: 1.3cqw; stroke-width: 1.8; transition: transform .25s; }
 .digital-contact:hover { background: #0c2049; box-shadow: 0 0 20px #1b69ff40, inset 0 0 12px #1b69ff20; }
 .digital-contact:hover svg { transform: translateX(3px); }
-.digital-intro { position: absolute; z-index: 5; top: calc(7.4% + 3.3cqw); left: 15%; width: 70%; text-align: center; }
-.digital-hero h1 { margin: 0; color: #fafafa; font-size: 5.03cqw; font-weight: 750; line-height: .98; letter-spacing: -.032em; }
+.digital-intro { position: absolute; z-index: 5; top: calc(7.4% + 1.98cqw); left: 15%; width: 70%; text-align: center; }
+.digital-hero h1 { margin: 0; color: #fafafa; font-size: 3.8cqw; font-weight: 750; line-height: .98; letter-spacing: -.032em; }
 .digital-hero h1 > span { display: block; }
 .digital-hero h1 em { font-style: normal; color: #4983ff; background: linear-gradient(105deg, #00b9ee 3%, #229cf1 26%, #5c6cf5 55%, #ab37ef 88%, #c13ce9); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .digital-description { margin: 1.15cqw 0 0; color: #b8c2dc; font-size: 1.425cqw; font-weight: 400; line-height: 1.34; letter-spacing: -.018em; }

@@ -3,8 +3,9 @@ import './Hero.css'
 
 const heroCopy = {
   ru: {
-    firstLine: 'Всё для вашего',
-    secondLine: 'бизнеса в',
+    firstLine: 'Ваши идеи.',
+    secondLine: 'Наши технологии.',
+    accentLine: 'Безграничные возможности.',
     description: ['Создаём сайты, автоматизируем процессы', 'и разрабатываем приложения для вашего бизнеса.'],
     contact: 'Обсудить проект',
     services: 'Цифровые решения для бизнеса',
@@ -17,8 +18,9 @@ const heroCopy = {
     ],
   },
   kk: {
-    firstLine: 'Бизнесіңізге қажет',
-    secondLine: 'барлығы —',
+    firstLine: 'Сіздің идеяларыңыз.',
+    secondLine: 'Біздің технологияларымыз.',
+    accentLine: 'Шексіз мүмкіндіктер.',
     description: ['Сайттар жасаймыз, процестерді автоматтандырамыз', 'және бизнесіңізге арналған қосымшалар әзірлейміз.'],
     contact: 'Жобаны талқылау',
     services: 'Бизнеске арналған цифрлық шешімдер',
@@ -31,8 +33,9 @@ const heroCopy = {
     ],
   },
   en: {
-    firstLine: 'Everything for your',
-    secondLine: 'business in',
+    firstLine: 'Your ideas.',
+    secondLine: 'Our technology.',
+    accentLine: 'Limitless possibilities.',
     description: ['We build websites, automate processes', 'and develop applications for your business.'],
     contact: 'Discuss a project',
     services: 'Digital solutions for business',
@@ -111,7 +114,7 @@ export default function Hero({ language }) {
     </header>
 
     <div className="digital-intro">
-      <h1 id="hero-title"><span>{l.firstLine}</span><span>{l.secondLine}{' '}<em>Digital</em></span></h1>
+      <h1 id="hero-title"><span>{l.firstLine}</span><span>{l.secondLine}</span><span><em>{l.accentLine}</em></span></h1>
       <p className="digital-description">{l.description.map(line => <span key={line}>{line}</span>)}</p>
     </div>
 
